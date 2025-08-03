@@ -15,27 +15,27 @@ This repository hosts the modeling architecture, scripts, and analytics pipeline
 
 ## 📁 Repository Structure
 
-```plaintext
 uevf-ascde-modeling/
-├── data/             # Sample queue data, project metadata, ELCC tables (linked to Google Drive)
-├── notebooks/        # Jupyter notebooks for interactive modeling and charting
-├── scripts/          # Main modeling pipeline (e.g., run_ascde.py, calc_elcc.py)
-├── utils/            # Helper modules for queue parsing, ELCC curves, entropy modeling
-├── models/           # Serialized survival models, ELCC decay fits, etc.
-├── outputs/          # Generated CSVs, ASCDE rankings, plots, charts
-├── requirements.txt  # Dependencies
-├── README.md         # Project overview and usage instructions
-└── .gitignore        # Ignored files and folders
-```
+├── data/                    # Sample queue data, project metadata (linked via Google Drive)
+├── notebooks/               # Jupyter notebooks for interactive modeling and charting
+├── docs/                    # Documentation and GitHub Pages site content
+├── outputs/                 # Generated CSVs, ASCDE rankings, plots, charts
+├── uevf/                    # Core Python package modules (config, elcc, survival, ascde, utils)
+├── main.py                  # Unified CLI runner for ELCC → Survival → ASCDE pipeline
+├── setup.py                 # Package installation script for editable install
+├── requirements.txt         # Python dependencies
+├── LICENSE                  # MIT license
+└── .gitignore               # Files and folders to ignore in Git
 
 ---
 
 ## ⚙️ Key Scripts
 
-- `scripts/run_ascde.py`: Full ASCDE score computation from preprocessed data
-- `scripts/calc_elcc.py`: ELCC assignment by tech/region with saturation penalties
-- `utils/queue_utils.py`: Functions for parsing queue data, computing friction scores
-- `notebooks/survival_modeling.ipynb`: Survival entropy, probability fitting, and visualization
+- `main.py` : Unified entry point for running ELCC, survival entropy, and ASCDE in one CLI  
+- `uevf/elcc.py` : Core ELCC calculation functions (baseline + penetration decay)  
+- `uevf/survival.py` : Survival curve estimation and entropy computation  
+- `uevf/ascde.py` : ASCDE score calculation module  
+- `uevf/utils.py` : I/O helper functions for CSV loading and saving  
 
 ---
 
