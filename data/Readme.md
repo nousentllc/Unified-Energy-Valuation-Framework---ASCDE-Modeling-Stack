@@ -23,3 +23,9 @@ uevf-ascde-modeling/
 ├── utils/            # Helper modules for queue parsing, ELCC curves, entropy modeling
 ├── models/           # Serialized survival models, ELCC decay fits, etc.
 ├── outputs/          # Generated CSVs, ASCDE rankings, plots, charts
+
+## 📂 Data Directory (Google Drive)
+
+All large data assets are stored externally in Drive.
+
+See [`data/README.md`](data/README.md) for file list, structure, and integration instructions.
